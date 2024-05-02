@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frase Halagadora</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        #halago {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <p style="color:red;">Frase bonitas</p>
+        </h1>
+        <button onclick="mostrarHalago()">un clik</button>
+        <p id="halago">puede mejorar tu dia </p>
+    </div>
+
+    <script>
+        function mostrarHalago() {
+            var halagos = [
+            "Eres una persona increíblemente talentosa.",
+            "Tu creatividad es inspiradora.",
+            "Tienes una sonrisa contagiosa.",
+            "El secreto del cambio es enfocar toda tu energía, no en luchar contra lo viejo, sino en construir lo nuevo.",
+            "Eres una luz brillante en la vida de los demás.",
+            "Siempre encuentras la manera de hacer que las personas se sientan especiales.",
+            "Tu determinación es admirable.",
+            "Tienes un corazón de oro.",
+            "Eres un ejemplo a seguir para todos.",
+            "Tu positividad es realmente reconfortante.",
+            "La forma en que enfrentas los desafíos es admirable.",
+            "Nunca dejas de impresionar con tus habilidades.",
+            "Eres una persona asombrosamente generosa.",
+            "Tu amabilidad no tiene comparación.",
+            "La forma en que perseveras es inspiradora.",
+            "Dicen que el insomnio es por falta de sueño: pero el mío es por falta de ti, es que tú eres mi sueño y me faltas aquí",
+            "Hacer las cosas de corazón nunca se pierde",
+            "Veo en ti lo que Van Gogh veía en las estrellas",
+            "Si me haces feliz no debe tener sentido para los demás",
+            ];
+            var randomIndex = Math.floor(Math.random() * halagos.length);
+            document.getElementById("halago").textContent = halagos[randomIndex];
+        }
+    </script>
+</body>
+</html>
