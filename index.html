@@ -7,6 +7,9 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            position: relative;
+            margin: 0; /* Asegurar que no haya espacio extra alrededor del cuerpo */
+            padding-bottom: 40px; /* Espacio para el botón */
         }
         .container {
             text-align: center;
@@ -14,6 +17,27 @@
         }
         #halago {
             font-size: 18px;
+            margin-top: 20px;
+        }
+        body.modo-nocturno {
+            background-color: #333;
+            color: #fff;
+        }
+        .modo-nocturno button {
+            background-color: #444;
+        }
+        #botonModoNocturno {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
             margin-top: 20px;
         }
     </style>
@@ -24,34 +48,39 @@
             <p style="color:red;">Frase bonitas</p>
         </h1>
         <button onclick="mostrarHalago()">un clik</button>
-        <p id="halago">puede mejorar tu dia </p>
+        <p id="halago">Puede mejorar tu día</p>
     </div>
+    <button id="botonModoNocturno" onclick="activarModoNocturno()">Modo Nocturno</button>
 
     <script>
         function mostrarHalago() {
             var halagos = [
-            "Eres una persona increíblemente talentosa.",
-            "Tu creatividad es inspiradora.",
-            "Tienes una sonrisa contagiosa.",
-            "El secreto del cambio es enfocar toda tu energía, no en luchar contra lo viejo, sino en construir lo nuevo.",
-            "Eres una luz brillante en la vida de los demás.",
-            "Siempre encuentras la manera de hacer que las personas se sientan especiales.",
-            "Tu determinación es admirable.",
-            "Tienes un corazón de oro.",
-            "Eres un ejemplo a seguir para todos.",
-            "Tu positividad es realmente reconfortante.",
-            "La forma en que enfrentas los desafíos es admirable.",
-            "Nunca dejas de impresionar con tus habilidades.",
-            "Eres una persona asombrosamente generosa.",
-            "Tu amabilidad no tiene comparación.",
-            "La forma en que perseveras es inspiradora.",
-            "Dicen que el insomnio es por falta de sueño: pero el mío es por falta de ti, es que tú eres mi sueño y me faltas aquí",
-            "Hacer las cosas de corazón nunca se pierde",
-            "Veo en ti lo que Van Gogh veía en las estrellas",
-            "Si me haces feliz no debe tener sentido para los demás",
+                "Eres una persona increíblemente talentosa.",
+                "Tu creatividad es inspiradora.",
+                "Tienes una sonrisa contagiosa.",
+                "El secreto del cambio es enfocar toda tu energía, no en luchar contra lo viejo, sino en construir lo nuevo.",
+                "Eres una luz brillante en la vida de los demás.",
+                "Siempre encuentras la manera de hacer que las personas se sientan especiales.",
+                "Tu determinación es admirable.",
+                "Tienes un corazón de oro.",
+                "Eres un ejemplo a seguir para todos.",
+                "Tu positividad es realmente reconfortante.",
+                "La forma en que enfrentas los desafíos es admirable.",
+                "Nunca dejas de impresionar con tus habilidades.",
+                "Eres una persona asombrosamente generosa.",
+                "Tu amabilidad no tiene comparación.",
+                "La forma en que perseveras es inspiradora.",
+                "Dicen que el insomnio es por falta de sueño: pero el mío es por falta de ti, es que tú eres mi sueño y me faltas aquí",
+                "Hacer las cosas de corazón nunca se pierde",
+                "Veo en ti lo que Van Gogh veía en las estrellas",
+                "Si me haces feliz no debe tener sentido para los demás",
             ];
             var randomIndex = Math.floor(Math.random() * halagos.length);
             document.getElementById("halago").textContent = halagos[randomIndex];
+        }
+
+        function activarModoNocturno() {
+            document.body.classList.toggle('modo-nocturno');
         }
     </script>
 </body>
