@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pagina>
+    <titulo>Frase Halagadora</titulo>
+    <contenido>
+        <frase_bonita>Frase bonitas</frase_bonita>
+        <boton_obtener_halago>Obtener Halago</boton_obtener_halago>
+        <halago>Puede mejorar tu día</halago>
+    </contenido>
+    <modo_nocturno>
+        <boton_modificar>Modo Nocturno</boton_modificar>
+    </modo_nocturno>
+</pagina>
